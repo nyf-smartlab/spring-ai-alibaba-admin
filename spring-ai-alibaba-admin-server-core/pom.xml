@@ -8,9 +8,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>spring-ai-alibaba-studio-server-core</artifactId>
-    <name>Spring AI Alibaba Studio Server Core</name>
-    <description>Shared core components of studio server</description>
+    <artifactId>spring-ai-alibaba-admin-server-core</artifactId>
+    <name>Spring AI Alibaba Admin Server Core</name>
+    <description>Shared core components of admin server</description>
     <url>https://github.com/alibaba/spring-ai-alibaba</url>
     <scm>
         <connection>git://github.com/alibaba/spring-ai-alibaba.git</connection>
@@ -49,8 +49,7 @@
 
         <dependency>
             <groupId>com.alibaba.cloud.ai</groupId>
-            <artifactId>spring-ai-alibaba-studio-server-runtime</artifactId>
-            <version>${project.parent.version}</version>
+            <artifactId>spring-ai-alibaba-admin-server-runtime</artifactId>
         </dependency>
 
         <!-- db -->

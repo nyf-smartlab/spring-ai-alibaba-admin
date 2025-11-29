@@ -40,7 +40,6 @@ import org.springframework.context.annotation.FilterType;
  *
  * @since 1.0.0-M1
  */
-// @SpringBootApplication(scanBasePackages = "com.alibaba.cloud.ai.studio")
 @SpringBootApplication
 @MapperScan("com.alibaba.cloud.ai.studio.admin.mapper")
 @ComponentScan(basePackages = { "com.alibaba.cloud.ai.studio" },

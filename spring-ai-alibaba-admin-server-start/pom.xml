@@ -55,18 +55,18 @@
     </properties>
 
 
-    <artifactId>spring-ai-alibaba-admin-server</artifactId>
+    <artifactId>spring-ai-alibaba-admin-server-start</artifactId>
+    <name>Spring AI Alibaba Admin Server Start</name>
     <description>Backend implementation of the visualized studio for building applications.</description>
 
     <dependencies>
         <dependency>
             <groupId>com.alibaba.cloud.ai</groupId>
-            <artifactId>spring-ai-alibaba-studio-server-core</artifactId>
-            <version>${project.parent.version}</version>
+            <artifactId>spring-ai-alibaba-admin-server-core</artifactId>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud.ai</groupId>
-            <artifactId>spring-ai-alibaba-studio-server-openapi</artifactId>
+            <artifactId>spring-ai-alibaba-admin-server-openapi</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
 
@@ -189,8 +189,8 @@
         <!-- DB  -->
 
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
             <version>${mysql.version}</version>
         </dependency>
 
@@ -198,17 +198,14 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
-            <version>${mybatis-plus.version}</version>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-jsqlparser</artifactId>
-            <version>${mybatis-plus.version}</version>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-annotation</artifactId>
-            <version>${mybatis-plus.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.ai</groupId>
@@ -304,11 +301,10 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.12.0</version>
         </dependency>
+
         <dependency>
             <groupId>com.alibaba.cloud.ai</groupId>
-            <artifactId>spring-ai-alibaba-studio-server-runtime</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <artifactId>spring-ai-alibaba-admin-server-runtime</artifactId>
         </dependency>
 
 
@@ -328,6 +324,9 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <mainClass>com.alibaba.cloud.ai.studio.admin.SaaStudioAdmin</mainClass>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
