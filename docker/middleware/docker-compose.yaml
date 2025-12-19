@@ -132,7 +132,7 @@ services:
     healthcheck:
       test: [ "CMD", "redis-cli", "ping" ]
   rmq_namesrv:
-    image: swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/apache/rocketmq:5.3.2
+    image: apache/rocketmq:5.3.2
     container_name: rmq_namesrv
     restart: always
     environment:
@@ -149,7 +149,7 @@ services:
       timeout: 5s
       retries: 5
   rmq_broker:
-    image: swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/apache/rocketmq:5.3.2
+    image: apache/rocketmq:5.3.2
     container_name: rmq_broker
     restart: always
     environment:
@@ -172,7 +172,7 @@ services:
       timeout: 5s
       retries: 5
   rmq_proxy:
-    image: swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/apache/rocketmq:5.3.2
+    image: apache/rocketmq:5.3.2
     container_name: rmq_proxy
     restart: always
     volumes:
