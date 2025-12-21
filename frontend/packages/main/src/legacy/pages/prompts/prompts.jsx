@@ -273,7 +273,7 @@ const PromptsPage = () => {
               icon={<ShareAltOutlined />}
               onClick={(e) => {
                 e.stopPropagation();
-                navigate(`/tracing`, {
+                navigate(buildLegacyPath("/tracing"), {
                   state: {
                     adv: {
                       "spring.ai.alibaba.prompt.key":record.promptKey

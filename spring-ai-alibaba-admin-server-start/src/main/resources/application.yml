@@ -64,7 +64,9 @@ spring:
   application:
     name: saa-studio
   config:
-    import: classpath:initializr.yml
+    import: 
+      - classpath:initializr.yml
+      - classpath:elasticsearch.yml
 
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -100,8 +102,9 @@ spring:
     content-type: text/html
     template-loader-path: classpath:/templates/
   elasticsearch:
+    # Spring Boot 默认 Elasticsearch 配置（如果使用 Spring Data Elasticsearch）
+    # 注意：自定义 ElasticsearchClient 的配置在 elasticsearch.yml 中
     uris: http://47.239.212.78:9200
-    connection-timeout: 10000
   jpa:
     database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
